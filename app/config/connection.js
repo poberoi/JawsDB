@@ -13,19 +13,12 @@ var source = {
         user: 'root',
         password: '',
         database: "starwars"
-    },
-    jawsDB: {
-        port: 3306,
-        host: 'jw0ch9vofhcajqg7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        username: 'scl4fyvy0sifntu1',
-        Password: 'k4hntsec4qq4dxzu',
-        database: 'w6yu2458uzfgr0h4'
     }
 }
 
 
 // TODO: connect your jawsDB connection witht he mysql connection.
-var connection = mysql.createConnection(source.jawsDB);
+var connection = mysql.createConnection(process.env.JAWSDB_URL || source.localhost);
 
 
 
